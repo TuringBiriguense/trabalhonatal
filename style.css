@@ -9,7 +9,7 @@
 body {
   overflow: hidden;
   height: 100vh;
-  background: linear-gradient(to bottom, #2d91c2 0%, #1e528e 100%);
+  background: linear-gradient(to bottom, #0a3a52 0%, #1e528e 100%);
 }
 
 .container {
@@ -28,9 +28,9 @@ h2 {
   font-size: 3rem;
   z-index: 3;
   position: absolute;
-  top: 70%;  /* Ajuste a porcentagem conforme necessário */
+  top: 70%;
   left: 50%;
-  transform: translateX(-50%);  /* Centraliza horizontalmente */
+  transform: translateX(-50%);
 }
 
 h2:hover {
@@ -55,6 +55,7 @@ h2:hover {
   }
 }
 
+/* Animação de neve */
 .snow {
   position: absolute;
   top: 0;
@@ -63,6 +64,8 @@ h2:hover {
   bottom: 0;
   pointer-events: none;
   z-index: 1;
+  opacity: 0;
+  animation: snowStart 1s forwards 26s; /* Iniciar a neve apenas após 26 segundos */
 }
 
 .snow span {
@@ -79,6 +82,12 @@ h2:hover {
 @keyframes snowfall {
   to {
     transform: translateY(100vh);
+  }
+}
+
+@keyframes snowStart {
+  100% {
+    opacity: 1;
   }
 }
 
@@ -126,11 +135,11 @@ h2:hover {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: rgba(173, 216, 230, 0.6); /* Azul claro com opacidade ajustada */
+  background: rgba(173, 216, 230, 0.6);
   backdrop-filter: blur(6px);
   border-radius: 15px;
   z-index: 2;
-  animation: ice-crack 4s forwards 26s; /* A animação começa após 26s */
+  animation: ice-crack 4s forwards 26s;
 }
 
 @keyframes ice-crack {
@@ -145,5 +154,28 @@ h2:hover {
   100% {
     clip-path: polygon(50% 50%, 50% 50%, 50% 50%, 50% 50%);
     opacity: 0;
+  }
+}
+
+/* Animação do Papai Noel e seu Trenó */
+.santa-train {
+  position: absolute;
+  top: 10%;
+  right: -200px; /* Inicia do lado direito */
+  animation: santaMove 12s linear infinite 26s; /* Começa aos 26 segundos */
+  z-index: 2;
+}
+
+.santa {
+  width: 210px;
+  height: auto;
+}
+
+@keyframes santaMove {
+  0% {
+    right: -200px;
+  }
+  100% {
+    right: 100%;
   }
 }
