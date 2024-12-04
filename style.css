@@ -22,18 +22,20 @@ body {
   position: relative;
 }
 
-h1 {
+h2 {
   color: white;
   text-shadow: 1px 6px 10px black;
-  font-size: 3rem; /* Ajuste de tamanho conforme necessário */
+  font-size: 3rem;
   z-index: 3;
-  margin-top: 20vh; /* Ajuste a margem para garantir que o texto fique mais alto */
+  position: absolute;
+  top: 70%;  /* Ajuste a porcentagem conforme necessário */
+  left: 50%;
+  transform: translateX(-50%);  /* Centraliza horizontalmente */
 }
 
-h1:hover {
+h2:hover {
   animation: tremendo 0.5s ease-in-out infinite;
 }
-
 
 @keyframes tremendo {
   10% {
