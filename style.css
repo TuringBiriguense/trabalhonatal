@@ -1,0 +1,190 @@
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overflow: hidden;
+  height: 100vh;
+  background: linear-gradient(to bottom, #2d91c2 0%, #1e528e 100%);
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Pacifico", cursive;
+  height: 100vh;
+  text-align: center;
+  position: relative;
+}
+
+h1 {
+  color: white;
+  text-shadow: 1px 6px 10px black;
+  position: absolute;
+  z-index: 2;
+}
+
+h1:hover {
+  animation: tremendo 0.5s ease-in-out infinite;
+}
+
+@keyframes tremendo {
+  10% {
+    transform: rotateZ(2deg);
+  }
+  30% {
+    transform: rotateZ(-5deg);
+  }
+  50% {
+    transform: rotateZ(5deg);
+  }
+  80% {
+    transform: rotateZ(-2deg);
+  }
+  100% {
+    transform: rotateZ(0);
+  }
+}
+
+@keyframes entry {
+  0% {
+    transform: translateX(-1000px);
+    opacity: 0;
+  }
+  70% {
+    transform: translateX(0);
+    opacity: 0.7;
+  }
+  80% {
+    transform: translateX(-5px);
+  }
+  90% {
+    transform: translateX(2px);
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.snow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.snow span {
+  position: absolute;
+  top: -10px;
+  width: 5px;
+  height: 5px;
+  background: white;
+  border-radius: 50%;
+  opacity: 0.8;
+  animation: snowfall 10s linear infinite;
+}
+
+@keyframes snowfall {
+  to {
+    transform: translateY(100vh);
+  }
+}
+
+.snow span:nth-child(1) {
+  left: 10%;
+  animation-duration: 12s;
+  animation-delay: 0s;
+}
+
+.snow span:nth-child(2) {
+  left: 15%;
+  animation-duration: 8s;
+  animation-delay: 2s;
+}
+
+.snow span:nth-child(3) {
+  left: 30%;
+  animation-duration: 10s;
+  animation-delay: 4s;
+}
+
+.snow span:nth-child(4) {
+  left: 55%;
+  animation-duration: 15s;
+  animation-delay: 1s;
+}
+
+.snow span:nth-child(5) {
+  left: 60%;
+  animation-duration: 9s;
+  animation-delay: 6s;
+}
+
+.snow span:nth-child(6) {
+  left: 85%;
+  animation-duration: 13s;
+  animation-delay: 3s;
+}
+
+.snow span:nth-child(7) {
+  left: 90%;
+  animation-duration: 16s;
+  animation-delay: 2s;
+}
+
+.snow span:nth-child(8) {
+  left: 95%;
+  animation-duration: 14s;
+  animation-delay: 5s;
+}
+
+.snow span:nth-child(9) {
+  left: 47%;
+  animation-duration: 4s;
+  animation-delay: 4s;
+}
+
+.snow span:nth-child(10) {
+  left: 82%;
+  animation-duration: 20s;
+  animation-delay: 7s;
+}
+
+.moon img {
+    animation: moonentry 2s ease-in-out;
+    width: 70%;
+    filter: drop-shadow(2px 2px 100px white);
+    transition: all 1s ease-in-out;
+}
+
+.moon img:hover {
+    transform: scale(1.1);
+}
+
+@keyframes moonentry {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.logoif {
+  position: absolute;
+  bottom: 10px;
+  transition: all 1s ease-in-out;
+}
+
+.logoif:hover {
+  transform: scale(1.1);
+}
